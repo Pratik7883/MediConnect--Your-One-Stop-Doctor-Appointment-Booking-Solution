@@ -1,0 +1,50 @@
+.overview-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.alert-box {
+    background-color: #FFF3CD;
+    color: #856404;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info-icon {
+    margin-right: 8px;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info h2 {
+    margin: 0;
+}
+
+.rating {
+    font-size: 14px;
+    color: #FFA500;
+}
+
+.details-section {
+    margin-top: 20px;
+}
+
+.highlight {
+    color: #0099CC;
+    font-weight: bold;
+}

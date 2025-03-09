@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Profile</title>
+    <link rel="stylesheet" href="assets/css/profile.css">
+</head>
+<body>
+
+<div class="profile-container">
+    
+    <!-- Notification Box -->
+    <div class="alert-box">
+        <i class="info-icon">ℹ️</i>
+        <span>To get approval, please complete your profile. We'll review manually and approve within 3 days.</span>
+    </div>
+
+    <!-- Overview Section -->
+    <div class="overview-container">
+        <div class="profile-card">
+            <img src="profile.jpg" alt="Doctor Profile" class="profile-img">
+            <div class="profile-info">
+                <h2>Dylan Kaufman</h2>
+                <span class="rating">⭐ 0 (0)</span>
+            </div>
+        </div>
+
+        <div class="details-section">
+            <h3>About <span class="highlight">Dylan Kaufman</span></h3>
+            <p>Education</p>
+            <p>Experience</p>
+        </div>
+    </div>
+
+    <!-- Profile Update Section -->
+    <div class="profile-form">
+        <h2>Profile Information</h2>
+
+        <label for="name">Name*</label>
+        <input type="text" id="name" value="Dylan Kaufman">
+
+        <label for="email">Email*</label>
+        <input type="email" id="email" value="tites@mailinator.com">
+
+        <label for="phone">Phone*</label>
+        <input type="tel" id="phone" placeholder="Phone Number">
+
+        <label for="bio">Bio*</label>
+        <input type="text" id="bio" placeholder="Bio">
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender">
+                    <option>Select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="specialization">Specialization*</label>
+                <select id="specialization">
+                    <option>Select</option>
+                    <option>Cardiology</option>
+                    <option>Neurology</option>
+                    <option>Pediatrics</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ticket-price">Ticket Price*</label>
+                <input type="number" id="ticket-price" value="0">
+            </div>
+        </div>
+
+        <!-- Buttons for Qualifications, Experience, and Time Slots -->
+        <button class="add-btn">Add Qualification</button>
+        <button class="add-btn">Add Experience</button>
+        <button class="add-btn">Add TimeSlot</button>
+
+        <!-- About Section -->
+        <label for="about">About*</label>
+        <textarea id="about" placeholder="Write about you"></textarea>
+    </div>
+
+</div>
+
+</body>
+</html>

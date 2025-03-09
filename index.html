@@ -4,28 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediConnect - Doctor Appointment</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <script defer src="assets/js/script.js"></script>
+    <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach((item) => {
+            item.addEventListener("click", function () {
+                let answer = this.nextElementSibling;
+
+                // Close all other answers
+                document.querySelectorAll(".faq-answer").forEach((ans) => {
+                    if (ans !== answer) {
+                        ans.style.display = "none";
+                    }
+                });
+
+                // Toggle current answer
+                if (answer.style.display === "block") {
+                    answer.style.display = "none";
+                } else {
+                    answer.style.display = "block";
+                }
+            });
+        });
+    });
+</script>
+
+    </script>
+    
+    
 </head>
 <body>
+<!-- Navbar (Header) -->
+<header class="navbar">
+    <div class="logo-container">
+        <img src="assets/images/logo.png" alt="MediConnect Logo" class="logo">
+    </div>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="find-doctor.html">Find a Doctor</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="user-profile">
+        <img src="assets/images/avatar-icon.png" alt="User" id="user-icon" class="hidden">
+        <button class="login-btn">Log In</button>
+    </div>
+</header>
 
-    <!-- Navbar (Header) -->
-    <header class="navbar">
-        <div class="logo-container">
-            <img src="assets/images/logo.png" alt="MediConnect Logo" class="logo">
-        </div>
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="find-doctor.html">Find a Doctor</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <div class="user-profile">
-            <img src="assets/images/avatar-icon.png" alt="User" id="user-icon" class="hidden">
-            <button class="login-btn">Log In</button>
-        </div>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    </header>
 
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
@@ -67,6 +96,8 @@
         <p>World-class care for everyone. Our health system offers unmatched, expert healthcare.</p>
     </section>
 
+    
+
     <!-- Best Medical Services Section -->
     <section class="medical-services">
         <div class="medical-content">
@@ -97,10 +128,214 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 MediConnect. All rights reserved.</p>
-    </footer>
+    
+    <!-- Our Other Services Section -->
+<!-- Our Other Services Section -->
+<section id="other-services">
+    <h2 class="section-title">Our Other Services</h2>
+
+    <div class="services-grid">
+        <div class="service-box">
+            <img src="assets/images/icon03.png" alt="Heart & Vascular" class="service-icon">
+            <h3>Heart & Vascular</h3>
+            <p>Advanced cardiology treatments to keep your heart healthy and strong.</p>
+        </div>
+
+        <div class="service-box">
+            <img src="assets/images/icon04.png" alt="Neurology" class="service-icon">
+            <h3>Neurology</h3>
+            <p>Comprehensive neurological care for brain and spine disorders.</p>
+        </div>
+
+        <div class="service-box">
+            <img src="assets/images/icon05.png" alt="Orthopedics" class="service-icon">
+            <h3>Orthopedics</h3>
+            <p>Specialized treatments for bone, joint, and muscle conditions.</p>
+        </div>
+
+        <div class="service-box">
+            <img src="assets/images/icon06.png" alt="Pediatrics" class="service-icon">
+            <h3>Pediatrics</h3>
+            <p>Dedicated healthcare services for infants, children, and adolescents.</p>
+        </div>
+
+        <div class="service-box">
+            <img src="assets/images/icon07.png" alt="Emergency & Trauma Care" class="service-icon">
+            <h3>Emergency & Trauma Care</h3>
+            <p>24/7 emergency medical assistance with highly trained professionals.</p>
+        </div>
+
+        <div class="service-box">
+            <img src="assets/images/icon08.png" alt="Dermatology" class="service-icon">
+            <h3>Dermatology</h3>
+            <p>Skin care solutions with advanced dermatological treatments.</p>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <h2>Why Choose Medicare?</h2>
+    <div class="feature-cards">
+        <div class="feature-card">
+            <img src="assets/images/feature-img.png" alt="Easy Booking">
+            <h3>Easy Appointments</h3>
+            <p>Book appointments quickly and easily with just a few clicks.</p>
+        </div>
+        <div class="feature-card">
+            <img src="assets/images/doctor-img01.png" alt="24/7 Support">
+            <h3>24/7 Support</h3>
+            <p>Get medical advice and consultation anytime, anywhere.</p>
+        </div>
+        <div class="feature-card">
+            <img src="assets/images/doctor-img03.png" alt="Expert Doctors">
+            <h3>Expert Doctors</h3>
+            <p>Consult top medical professionals from various specialties.</p>
+        </div>
+    </div>
+</section>
+<div class="features-container">
+    <h2>Our Features</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <img src="icons/virtual-consultation.svg" alt="Virtual Consultation">
+            <h3>Virtual Consultation</h3>
+            <p>Get medical advice from top doctors without leaving your home.</p>
+        </div>
+        <div class="feature-card">
+            <img src="icons/appointment.svg" alt="Easy Appointment">
+            <h3>Easy Appointment</h3>
+            <p>Schedule appointments with just a few clicks.</p>
+        </div>
+        <div class="feature-card">
+            <img src="icons/medical-history.svg" alt="Medical Records">
+            <h3>Medical Records</h3>
+            <p>Access and manage your medical history anytime, anywhere.</p>
+        </div>
+      
+    </div>
+</div>
+<div class="container">
+    <div class="doctor-image">
+        <img src="assets/images/doctor-img01.png" alt="Doctor Image">
+    </div>
+    <div class="faq-section">
+        <h2>Most questions by our beloved patients</h2>
+        <div class="faq-item" onclick="toggleAnswer('answer1')">What is your medical care?</div>
+        <div id="answer1" class="faq-answer">We provide general and specialized medical care for all age groups.</div>
+        
+        <div class="faq-item" onclick="toggleAnswer('answer2')">What happens if I need to go to a hospital?</div>
+        <div id="answer2" class="faq-answer">We assist in hospital referrals and ensure smooth coordination of care.</div>
+        
+        <div class="faq-item" onclick="toggleAnswer('answer3')">Can I visit your medical office?</div>
+        <div id="answer3" class="faq-answer">Yes, our medical office is open for appointments and walk-ins.</div>
+        
+        <div class="faq-item" onclick="toggleAnswer('answer4')">Do you provide urgent care?</div>
+        <div id="answer4" class="faq-answer">Yes, we offer urgent care services for non-life-threatening conditions.</div>
+    </div>
+</div>
+</main>
+
+
+<!-- Our Greatest Doctors Section -->
+<section id="greatest-doctors" class="greatest-doctors">
+    <h2 class="section-title">Our Greatest Doctors</h2>
+
+    <!-- Meet Our Doctors Section (Centered Text) -->
+    <div class="meet-doctors">
+        <h3>Meet our highly experienced and dedicated doctors providing exceptional healthcare.</h3>
+    </div>
+
+    <div class="doctor-list">
+        <div class="doctor-card">
+            <img src="assets/images/doctor-img01.png" alt="Doctor 1">
+            <h3>Dr. John Doe</h3>
+            <p>Cardiologist</p>
+        </div>
+        <div class="doctor-card">
+            <img src="assets/images/doctor-img02.png" alt="Doctor 2">
+            <h3>Dr. Sarah Smith</h3>
+            <p>Neurologist</p>
+        </div>
+        <div class="doctor-card">
+            <img src="assets/images/doctor-img03.png" alt="Doctor 3">
+            <h3>Dr. Emily White</h3>
+            <p>Orthopedic Specialist</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Meet Our Doctors Section -->
+
+<section class="testimonial-section">
+    <h2>What Our Patients Say</h2>
+    <div class="testimonial-container">
+        <div class="testimonial">
+            <img src="https://via.placeholder.com/60" alt="User Image">
+            <p class="name">Muhibur Rahman</p>
+            <p class="stars">★★★★★</p>
+            <p>"I have taken medical services from them. They treat so well and they are providing the best medical services."</p>
+        </div>
+
+        <div class="testimonial">
+            <img src="https://via.placeholder.com/60" alt="User Image">
+            <p class="name">John Doe</p>
+            <p class="stars">★★★★★</p>
+            <p>"Great service and professional doctors. Highly recommended for anyone seeking quality healthcare!"</p>
+        </div>
+
+        <div class="testimonial">
+            <img src="https://via.placeholder.com/60" alt="User Image">
+            <p class="name">Sarah Smith</p>
+            <p class="stars">★★★★★</p>
+            <p>"The doctors are very caring and provide excellent treatment. I am really happy with their service."</p>
+        </div>
+    </div>
+</section>
+   <!-- Footer -->
+   <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section logo-section">
+            <img class="footer-logo" src="assets/images/logo.png" alt="MediConnect Logo">
+            <p>Copyright © 2025 developed by MediConnect. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="GitHub"></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>I want to:</h3>
+            <ul>
+                <li><a href="#">Find a Doctor</a></li>
+                <li><a href="#">Request an Appointment</a></li>
+                <li><a href="#">Find a Location</a></li>
+                <li><a href="#">Get an Opinion</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">Donate</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
     
 </body>
 </html>

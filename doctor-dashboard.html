@@ -1,0 +1,38 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Doctor Dashboard</title>
+        <link rel="stylesheet" href="assets/css/doctor-dashboard.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="sidebar">
+                <div class="profile-pic">
+                    <img src="user.png" alt="User Image">
+                </div>
+                <button class="tab-link active" onclick="openTab(event, 'overview')">Overview</button>
+                <button class="tab-link" onclick="openTab(event, 'appointments')">Appointments</button>
+                <button class="tab-link" onclick="openTab(event, 'profile')">Profile</button>
+                <button class="logout">Logout</button>
+                <button class="delete">Delete Account</button>
+            </div>
+            <div class="content">
+                <div id="overview" class="tab-content active">
+                    <h2>Overview</h2>
+                    <p>Doctor's dashboard overview details here.</p>
+                </div>
+                <div id="appointments" class="tab-content">
+                    <h2>Appointments</h2>
+                    <p>List of user appointments.</p>
+                </div>
+                <div id="profile" class="tab-content">
+                    <h2>Profile</h2>
+                    <p>Update doctor profile here.</p>
+                </div>
+            </div>
+        </div>
+        <script src="assets/js/doctor-dashboard.js"></script>
+    </body>
+    </html>

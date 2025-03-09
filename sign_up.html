@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare Signup</title>
+    <link rel="stylesheet" href="sign_up.css">
+</head>
+<body>
+    <header>
+        <div class="logo">+Medicare</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Find a Doctor</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="login-btn">Login</button>
+    </header>
+
+    <div class="container">
+        <div class="left-box">
+            <img src="sign_up_image.png" alt="Signup Illustration">
+        </div>
+        <div class="right-box">
+            <h2>Create an <span class="blue-text">account</span></h2>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Enter your email" required>
+                <input type="password" placeholder="Password" required>
+                <div class="dropdowns">
+                    <label>Are you a:</label>
+                    <select>
+                        <option>Patient</option>
+                        <option>Doctor</option>
+                    </select>
+                    <label>Gender:</label>
+                    <select>
+                        <option>Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="upload-photo">
+                    <img src="default-profile.png" alt="Profile">
+                    <button type="button">Upload Photo</button>
+                </div>
+                <button class="signup-btn">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#">Login</a></p>
+        </div>
+    </div>
+</body>
+</html>
